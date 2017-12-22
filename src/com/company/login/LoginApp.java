@@ -12,11 +12,12 @@ public class LoginApp extends Application{
 
     public void start(Stage stage){
         try {
-            Parent root = (Parent) FXMLLoader.load(getClass().getResource("login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle("StarFox");
+            stage.setResizable(false);
             stage.show();
         } catch (IOException error) {
             System.err.println("Arquivo FXML não encontrado");

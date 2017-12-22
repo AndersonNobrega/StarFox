@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class ConexaoBD {
 
-    private static final String SQCONN = "jdbc:sqlite:login.db";
+    private static final String SQCONN = "jdbc:sqlite:users.db";
 
     public static Connection verificaConexao() throws SQLException {
         try {
@@ -15,5 +15,4 @@ public class ConexaoBD {
             return null;
         }
     }
-
 }
