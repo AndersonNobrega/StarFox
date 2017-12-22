@@ -6,12 +6,7 @@ public class Filme extends Obra{
 		super(nome);
 	}
 	
-	public Filme(String nome, String comentario){
-		super(nome, comentario);
-	}
-
 	public String tipo() {
-		
 		return "Filme";
 	}
 }

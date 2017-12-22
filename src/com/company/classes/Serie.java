@@ -4,17 +4,28 @@ import java.util.ArrayList;
 
 public class Serie extends Obra{
 	
-	ArrayList<EpisodiosSerie> listaDeEps = new ArrayList<>();
+	private ArrayList<EpisodioSerie> listaDeEps;
+	
 	public Serie(String nome) {
 		super(nome);
+		this.listaDeEps = new ArrayList<>();
 	}
 	
-	public Serie(String nome, String comentario) {
-		super(nome, comentario);
-	}
-
-
 	public String tipo() {
-		return "Anime";
+		return "Serie";
+	}
+		
+	public void adicionaEps(int quantidadeEps){
+		for(int i = 0; i < quantidadeEps; i++){
+			listaDeEps.add(new EpisodioSerie());
+		}
+	}
+	
+	public void adicionaEp(String comentario){
+		listaDeEps.add(new EpisodioSerie(comentario));
+	}
+	
+	public EpisodioSerie getEp(int numEp){
+		return listaDeEps.get(numEp);
 	}
 }
