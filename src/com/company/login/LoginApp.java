@@ -12,7 +12,7 @@ public class LoginApp extends Application{
 
     public void start(Stage stage){
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/login.fxml"));
 
             Scene scene = new Scene(root);
             stage.setScene(scene);

@@ -22,7 +22,8 @@ class LoginModel {
         }
     }
 
-    boolean isLogin(String user, String password) throws SQLException{
+    boolean isLogin(String user, String password) throws SQLException {
+
         PreparedStatement stmt;
         ResultSet rs;
 
