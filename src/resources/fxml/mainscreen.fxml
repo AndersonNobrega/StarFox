@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="720.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.app.ApplicationController">
    <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutY="27.0" prefHeight="709.0" prefWidth="1270.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="707.0" prefWidth="250.0" />
+            <TableView prefHeight="707.0" prefWidth="831.0">
+              <columns>
+                <TableColumn prefWidth="490.0" text="Title" />
+                  <TableColumn prefWidth="135.0" text="Type" />
+                  <TableColumn minWidth="0.0" prefWidth="114.0" text="Score" />
+                <TableColumn minWidth="0.0" prefWidth="147.0" text="Progress" />
+              </columns>
+            </TableView>
+        </items>
+      </SplitPane>
       <MenuBar prefHeight="29.0" prefWidth="1270.0" AnchorPane.bottomAnchor="707.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Options">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="addButton" mnemonicParsing="false" text="Add" />
+                  <MenuItem fx:id="filterButton" mnemonicParsing="false" text="Filter" />
+                  <MenuItem fx:id="exitButton" mnemonicParsing="false" onAction="#quit" text="Exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="gitHubButton" mnemonicParsing="false" onAction="#openGitHub" text="Github" />
             </items>
           </Menu>
         </menus>

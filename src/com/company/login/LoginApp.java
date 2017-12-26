@@ -11,6 +11,7 @@ import java.io.IOException;
 public class LoginApp extends Application{
 
     public void start(Stage stage){
+
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/login.fxml"));
 
