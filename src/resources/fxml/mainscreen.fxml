@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -25,7 +23,6 @@
           <Menu mnemonicParsing="false" text="Options">
             <items>
               <MenuItem fx:id="addButton" mnemonicParsing="false" text="Add" />
-                  <MenuItem fx:id="filterButton" mnemonicParsing="false" text="Filter" />
                   <MenuItem fx:id="exitButton" mnemonicParsing="false" onAction="#quit" text="Exit" />
             </items>
           </Menu>

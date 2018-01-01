@@ -1,18 +1,14 @@
 package com.company.login;
 
 
+import com.company.utils.InterfaceInitializer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginController {
@@ -21,12 +17,16 @@ public class LoginController {
 
     @FXML
     private TextField username;
+
     @FXML
     private PasswordField password;
+
     @FXML
     private Button loginButton;
+
     @FXML
     private Button signUpButton;
+
     @FXML
     private Label loginStatus;
 
@@ -35,9 +35,8 @@ public class LoginController {
 
         try {
             if (this.loginModel.isLogin(this.username.getText(), this.password.getText())) {
-                Stage stage = (Stage) this.loginButton.getScene().getWindow();
-                stage.close();
-                appWindow();
+                InterfaceInitializer.closeCurrentWindow(loginButton);
+                InterfaceInitializer.appWindow();
             } else {
                 this.loginStatus.setText("Wrong Login");
             }
@@ -47,20 +46,10 @@ public class LoginController {
         }
     }
 
-    private void appWindow() {
+    @FXML
+    public void signUp(ActionEvent event) {
 
-        try {
-            Stage appWindow = new Stage();
-            Pane appWindowRoot = FXMLLoader.load(getClass().getResource("/resources/fxml/mainscreen.fxml"));
-
-            Scene scene = new Scene(appWindowRoot);
-            appWindow.setScene(scene);
-            appWindow.setResizable(false);
-            appWindow.setTitle("Starfox");
-            appWindow.show();
-
-        } catch (IOException error) {
-            System.exit(1);
-        }
+        InterfaceInitializer.closeCurrentWindow(loginButton);
+        InterfaceInitializer.signUpWindow();
     }
 }

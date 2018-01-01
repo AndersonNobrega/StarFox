@@ -1,6 +1,6 @@
 package com.company.app;
 
-import com.company.login.LoginApp;
+import com.company.AppRunner;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class ApplicationController {
 
-    private LoginApp applicationSupport = new LoginApp();
+    private AppRunner applicationSupport = new AppRunner();
 
     @FXML
     private MenuItem addButton;
@@ -42,6 +42,7 @@ public class ApplicationController {
 
     @FXML
     public void addWindow(ActionEvent event) {
+
         try {
             Stage appWindow = new Stage();
             Pane appWindowRoot = FXMLLoader.load(getClass().getResource(""));
