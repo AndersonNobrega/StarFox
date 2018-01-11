@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.utils.InterfaceInitializer;
+import com.company.utils.PrimaryWindowsInit;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -8,7 +8,7 @@ public class AppRunner extends Application {
 
     public void start(Stage stage) {
 
-        InterfaceInitializer.loginWindow();
+        PrimaryWindowsInit.loginWindow();
     }
 
     public static void main(String[] args) {

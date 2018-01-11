@@ -1,6 +1,6 @@
 package com.company.signup;
 
-import com.company.utils.InterfaceInitializer;
+import com.company.utils.PrimaryWindowsInit;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -45,8 +45,8 @@ public class SignUpController {
                 this.accountStatus.setText("Passwords don't match");
             } else {
                 signUpModel.registerAccount(username.getText(), firstPassword.getText());
-                InterfaceInitializer.closeCurrentWindow(createAccount);
-                InterfaceInitializer.successWindow();
+                PrimaryWindowsInit.closeCurrentWindow(createAccount);
+                PrimaryWindowsInit.successWindow();
             }
 
         } catch (SQLException e) {
@@ -56,13 +56,13 @@ public class SignUpController {
 
     @FXML
     public void backButton(ActionEvent event) {
-        InterfaceInitializer.closeCurrentWindow(back);
-        InterfaceInitializer.loginWindow();
+        PrimaryWindowsInit.closeCurrentWindow(back);
+        PrimaryWindowsInit.loginWindow();
     }
 
     @FXML
     public void confirmCreation(ActionEvent event) {
-        InterfaceInitializer.closeCurrentWindow(confirmButton);
-        InterfaceInitializer.loginWindow();
+        PrimaryWindowsInit.closeCurrentWindow(confirmButton);
+        PrimaryWindowsInit.loginWindow();
     }
 }
