@@ -33,11 +33,6 @@ public class PrimaryWindowsInit implements WindowsInit{
         }
     }
 
-    public static void closeCurrentWindow(Button button) {
-        Stage stage = (Stage) button.getScene().getWindow();
-        stage.close();
-    }
-
     public static void signUpWindow() {
         new PrimaryWindowsInit("/resources/fxml/signup.fxml");
     }

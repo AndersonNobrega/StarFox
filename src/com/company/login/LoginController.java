@@ -2,6 +2,7 @@ package com.company.login;
 
 
 import com.company.utils.PrimaryWindowsInit;
+import com.company.utils.WindowsInit;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -35,7 +36,7 @@ public class LoginController {
 
         try {
             if (this.loginModel.isLogin(this.username.getText(), this.password.getText())) {
-                PrimaryWindowsInit.closeCurrentWindow(loginButton);
+                WindowsInit.closeCurrentWindow(loginButton);
                 PrimaryWindowsInit.appWindow();
             } else {
                 this.loginStatus.setText("Wrong Login");
@@ -49,7 +50,7 @@ public class LoginController {
     @FXML
     public void signUp(ActionEvent event) {
 
-        PrimaryWindowsInit.closeCurrentWindow(loginButton);
+        WindowsInit.closeCurrentWindow(loginButton);
         PrimaryWindowsInit.signUpWindow();
     }
 }

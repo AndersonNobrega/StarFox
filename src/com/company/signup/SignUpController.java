@@ -1,6 +1,7 @@
 package com.company.signup;
 
 import com.company.utils.PrimaryWindowsInit;
+import com.company.utils.WindowsInit;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -45,7 +46,7 @@ public class SignUpController {
                 this.accountStatus.setText("Passwords don't match");
             } else {
                 signUpModel.registerAccount(username.getText(), firstPassword.getText());
-                PrimaryWindowsInit.closeCurrentWindow(createAccount);
+                WindowsInit.closeCurrentWindow(createAccount);
                 PrimaryWindowsInit.successWindow();
             }
 
@@ -56,13 +57,13 @@ public class SignUpController {
 
     @FXML
     public void backButton(ActionEvent event) {
-        PrimaryWindowsInit.closeCurrentWindow(back);
+        WindowsInit.closeCurrentWindow(back);
         PrimaryWindowsInit.loginWindow();
     }
 
     @FXML
     public void confirmCreation(ActionEvent event) {
-        PrimaryWindowsInit.closeCurrentWindow(confirmButton);
+        WindowsInit.closeCurrentWindow(confirmButton);
         PrimaryWindowsInit.loginWindow();
     }
 }
